@@ -4,21 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Breathing animation for Hero section */
-@keyframes hero-breathing {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 8px 40px rgba(108, 99, 255, 0.2);
-  }
-  50% {
-    transform: scale(1.008);
-    box-shadow: 0 12px 60px rgba(108, 99, 255, 0.25);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 8px 40px rgba(108, 99, 255, 0.2);
-  }
-}
 
 .hero {
   animation: hero-breathing 8s ease-in-out infinite;
