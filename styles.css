@@ -382,6 +382,44 @@ input:focus, textarea:focus {
   box-shadow: 0 10px 25px rgba(108, 99, 255, 0.4);
 }
 
+/* Form Message Styling */
+.form-message {
+  margin: 20px auto;
+  padding: 15px 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Success message (green) */
+.form-message.success {
+  background: #E6FFFA;
+  color: #2F855A;
+  border: 1px solid #38A169;
+}
+
+/* Error message (red) */
+.form-message.error {
+  background: #FFF5F5;
+  color: #C53030;
+  border: 1px solid #E53E3E;
+}
+
+/* Smooth entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
  
 
