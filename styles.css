@@ -28,21 +28,28 @@ section {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
-/* Breathing animation for About Me section with bluish glow */
+/* Breathing animation for About Me section with noticeable bluish glow */
 @keyframes about-breathing {
   0% {
     transform: translateY(0) scale(1);
-    box-shadow: 0 6px 25px rgba(108, 99, 255, 0.15);
+    box-shadow: 0 0 20px 5px rgba(108, 99, 255, 0.3); /* stronger glow */
   }
   50% {
-    transform: translateY(-3px) scale(1.01);
-    box-shadow: 0 10px 35px rgba(108, 99, 255, 0.25);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 0 40px 10px rgba(108, 99, 255, 0.5); /* more intense glow */
   }
   100% {
     transform: translateY(0) scale(1);
-    box-shadow: 0 6px 25px rgba(108, 99, 255, 0.15);
+    box-shadow: 0 0 20px 5px rgba(108, 99, 255, 0.3);
   }
 }
+
+section:nth-of-type(1) { /* target the About Me section specifically */
+  animation: about-breathing 6s ease-in-out infinite;
+  will-change: transform, box-shadow;
+  border-radius: 16px; /* keeps corners rounded with glow */
+}
+
 
 
 
