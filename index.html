@@ -18,7 +18,6 @@
       <a href="https://builder.aws.com/community/@tinch254" target="_blank" class="aws-link">AWS Builder Center</a>
       <a href="https://www.linkedin.com/in/titus-mutungati-ba3696300/" target="_blank" class="aws-link">LinkedIn</a>
       <a href="https://github.com/Tinch2540" target="_blank" class="aws-link">GitHub</a>
-
       <a href="mailto:titusmutungati20@gmail.com" class="aws-link">Email</a>
     </div>
     <p class="hero-intro">📍 Nairobi, Kenya | 📞 +254112771870</p>
@@ -87,32 +86,49 @@
     </section>
 
     <!-- PROJECTS -->
-<section>
-  <h2>Projects</h2>
-  <div class="cards-grid">
-    <div class="card">
-      <h3>💡 AI-Powered Healthcare</h3>
-      <p>Developed web & SMS system to support patients with chronic diseases using AI-driven engagement.</p>
-    </div>
-    <div class="card">
-      <h3>🌐 AWS Builder Challenge</h3>
-      <p>Deployed static website with AWS S3 + CloudFront as part of AWS Builder Challenge #2.</p>
-     <a href="https://builder.aws.com/content/31wKyQnMNuJy1GkaBvu5m1fhcYX/the-deployed-heart" target="_blank">My Building Experience </a></p>
-
-    </div>
-    <div class="card">
-      <h3>📡 FTTH/HFC Deployments</h3>
-      <p>Installed and optimized fiber networks during internship at Cloud Base.</p>
-    </div>
-    <div class="card">
-      <h3>🌦 Weather Dashboard</h3>
-      <p>Built a dynamic weather dashboard using Flask & OpenWeather API. Hosted on Render for live access. 
-        <p>Article on my learning experience  <a href="https://builder.aws.com/content/31wNXglJLFANLPjl4rfMN8xpCQj/weather-dashboard-my-build-journey" target="_blank">My Learning Journey</a></p>
-      <p>Try It: <a href="https://weatherapp-yc3j.onrender.com/" target="_blank">View Live Project</a></p>
-    </div>
-  </div>
-</section>
-
+    <section>
+      <h2>Projects</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>💡 AI-Powered Healthcare</h3>
+          <p>Developed web & SMS system to support patients with chronic diseases using AI-driven engagement.</p>
+        </div>
+        <div class="card">
+          <h3>🌐 AWS Builder Challenge</h3>
+          <p>Deployed static website with AWS S3 + CloudFront as part of AWS Builder Challenge #2.</p>
+          <a href="https://builder.aws.com/content/31wKyQnMNuJy1GkaBvu5m1fhcYX/the-deployed-heart" target="_blank">My Building Experience</a>
+        </div>
+        <!-- NEW PROJECT -->
+        <div class="card">
+          <h3>📂 Linux Filesystem Management Project</h3>
+          <p>
+            Created and managed a multi-level company directory structure in Linux using 
+            <code>mkdir -p</code>, <code>cd</code>, <code>ls -R</code>, and <code>touch</code>. 
+            The project simulated real-world enterprise departments with subfolders and files. 
+            It included troubleshooting path typos and handling permissions with <code>sudo</code>.
+          </p>
+          <p><strong>Challenge:</strong> Managing nested directories and fixing errors like typos (<i>Developments → Development</i>).</p>
+          <p><strong>Skills Learned:</strong> Recursive directory creation, navigation, file handling, debugging, and permission management.</p>
+          
+          <!-- Screenshots -->
+          <div class="project-images">
+            <img src="challenge.png" alt="Challenge Screenshot" style="max-width:100%; border-radius:8px; margin-bottom:8px;">
+            <img src="Solution_1.png" alt="Solution Screenshot 1" style="max-width:100%; border-radius:8px; margin-bottom:8px;">
+            <img src="Solution_2.png" alt="Solution Screenshot 2" style="max-width:100%; border-radius:8px;">
+          </div>
+        </div>
+        <div class="card">
+          <h3>📡 FTTH/HFC Deployments</h3>
+          <p>Installed and optimized fiber networks during internship at Cloud Base.</p>
+        </div>
+        <div class="card">
+          <h3>🌦 Weather Dashboard</h3>
+          <p>Built a dynamic weather dashboard using Flask & OpenWeather API. Hosted on Render for live access.</p>
+          <p>Article on my learning experience <a href="https://builder.aws.com/content/31wNXglJLFANLPjl4rfMN8xpCQj/weather-dashboard-my-build-journey" target="_blank">My Learning Journey</a></p>
+          <p>Try It: <a href="https://weatherapp-yc3j.onrender.com/" target="_blank">View Live Project</a></p>
+        </div>
+      </div>
+    </section>
 
     <!-- EXPERIENCE -->
     <section>
@@ -176,98 +192,71 @@
       </div>
     </section>
 
-    <!-- CONTACT FORM SECTION - Added for user contact functionality -->
-<section class="contact-form">
-    <h3>Get In Touch</h3>
-    <p>Have a question or want to connect? Send me a message!</p>
-    <!-- Form message container for success/error messages -->
-    <div id="form-message" class="form-message" style="display: none;"></div>
-    <form class="contact-form-container">
-        <!-- Contact form input fields -->
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-form">
+      <h3>Get In Touch</h3>
+      <p>Have a question or want to connect? Send me a message!</p>
+      <div id="form-message" class="form-message" style="display: none;"></div>
+      <form class="contact-form-container">
         <div class="form-group">
-            <input type="text" id="name" name="name" required placeholder=" " />
-            <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder=" " />
+          <label for="name">Name</label>
         </div>
         <div class="form-group">
-            <input type="email" id="email" name="email" required placeholder=" " />
-            <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder=" " />
+          <label for="email">Email</label>
         </div>
         <div class="form-group">
-            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-            <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+          <label for="message">Message</label>
         </div>
-        <!-- Contact form submit button -->
         <button type="submit" class="contact-submit-btn">Send Message</button>
-    </form>
-</section>
-
-<!-- END CONTACT FORM SECTION -->
+      </form>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Titus Mutungati | Built with ❤️ on AWS</p>
   </footer>
+
   <script>
-    // Contact form handler - Sends form data to AWS Lambda
-    const LAMBDA_URL = 'https://w7wthfaw36la7v5x7z6o6dnd5m0agaae.lambda-url.us-east-1.on.aws/'; // Replace with your Function URL
-    
+    const LAMBDA_URL = 'https://w7wthfaw36la7v5x7z6o6dnd5m0agaae.lambda-url.us-east-1.on.aws/';
     document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('.contact-form-container');
-    
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-    
-            const submitBtn = form.querySelector('.contact-submit-btn');
-            const messageDiv = document.getElementById('form-message');
-    
-            // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            messageDiv.style.display = 'none';
-    
-            // Get form data
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                message: form.message.value
-            };
-    
-            try {
-                const response = await fetch(LAMBDA_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-    
-                if (response.ok) {
-                    showMessage('Message sent successfully! Thank you for reaching out.', 'success');
-                    form.reset();
-                } else {
-                    showMessage('Failed to send message. Please try again.', 'error');
-                }
-            } catch (error) {
-                showMessage('Network error. Please check your connection and try again.', 'error');
-            }
-    
-            // Reset button
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
-        });
-    });
-    
-    function showMessage(text, type) {
+      const form = document.querySelector('.contact-form-container');
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = form.querySelector('.contact-submit-btn');
         const messageDiv = document.getElementById('form-message');
-        messageDiv.textContent = text;
-        messageDiv.className = `form-message ${type}`;
-        messageDiv.style.display = 'block';
-    
-        // Auto-hide after 10 seconds
-        setTimeout(() => {
-            messageDiv.style.display = 'none';
-        }, 10000);
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        messageDiv.style.display = 'none';
+        const formData = { name: form.name.value, email: form.email.value, message: form.message.value };
+        try {
+          const response = await fetch(LAMBDA_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+          if (response.ok) {
+            showMessage('Message sent successfully! Thank you for reaching out.', 'success');
+            form.reset();
+          } else {
+            showMessage('Failed to send message. Please try again.', 'error');
+          }
+        } catch (error) {
+          showMessage('Network error. Please check your connection and try again.', 'error');
+        }
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+      });
+    });
+    function showMessage(text, type) {
+      const messageDiv = document.getElementById('form-message');
+      messageDiv.textContent = text;
+      messageDiv.className = `form-message ${type}`;
+      messageDiv.style.display = 'block';
+      setTimeout(() => { messageDiv.style.display = 'none'; }, 10000);
     }
-</script>
+  </script>
 </body>
 </html>
