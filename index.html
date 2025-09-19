@@ -15,15 +15,27 @@
     .project-images {
       margin-top: 15px;
     }
-    .solution {
+    .solution, .challenge {
       margin-bottom: 20px;
+      text-align: center;
     }
-    .solution img {
+    .solution img, .challenge img {
       max-width: 90%;
+      height: auto;
       border-radius: 10px;
       display: block;
       margin: 10px auto;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -118,7 +130,7 @@
           <p>Deployed static website with AWS S3 + CloudFront as part of AWS Builder Challenge #2.</p>
           <a href="https://builder.aws.com/content/31wKyQnMNuJy1GkaBvu5m1fhcYX/the-deployed-heart" target="_blank">My Building Experience</a>
         </div>
-        <!-- NEW PROJECT -->
+        <!-- Linux Project Card -->
         <div class="card wide-card">
           <h3>📂 Linux Filesystem Management Project</h3>
           <p>
@@ -128,20 +140,24 @@
             It included troubleshooting path typos and handling permissions with <code>sudo</code>.
           </p>
           <p><strong>Skills Learned:</strong> Recursive directory creation, navigation, file handling, debugging, and permission management.</p>
-          
+
           <!-- Challenge -->
           <div class="project-images">
-            <h3>Challenge</h3>
-            <img src="Challenge.png" alt="Challenge Screenshot">
-
-            <div class="solution">
-              <h4>Solution Part 1</h4>
-              <img src="solution1.png" alt="Solution 1 Screenshot">
+            <div class="challenge">
+              <h3>Challenge</h3>
+              <p>Managing nested directories and fixing errors like typos (<i>Developments → Development</i>).</p>
+              <img src="Challenge.png" alt="Challenge Screenshot">
             </div>
 
-            <div class="solution">
-              <h4>Solution Part 2</h4>
-              <img src="solution2.png" alt="Solution 2 Screenshot">
+            <div class="solutions-grid">
+              <div class="solution">
+                <h4>Solution Part 1</h4>
+                <img src="Solution_1.png" alt="Solution 1 Screenshot">
+              </div>
+              <div class="solution">
+                <h4>Solution Part 2</h4>
+                <img src="Solution_2.png" alt="Solution 2 Screenshot">
+              </div>
             </div>
           </div>
         </div>
