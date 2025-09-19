@@ -6,6 +6,26 @@
   <title>Titus Mutungati - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra style just for Linux Project Card */
+    .wide-card {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .project-images {
+      margin-top: 15px;
+    }
+    .solution {
+      margin-bottom: 20px;
+    }
+    .solution img {
+      max-width: 90%;
+      border-radius: 10px;
+      display: block;
+      margin: 10px auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -99,7 +119,7 @@
           <a href="https://builder.aws.com/content/31wKyQnMNuJy1GkaBvu5m1fhcYX/the-deployed-heart" target="_blank">My Building Experience</a>
         </div>
         <!-- NEW PROJECT -->
-        <div class="card" style="max-width: 600px;">
+        <div class="card wide-card">
           <h3>📂 Linux Filesystem Management Project</h3>
           <p>
             Created and managed a multi-level company directory structure in Linux using 
@@ -107,13 +127,22 @@
             The project simulated real-world enterprise departments with subfolders and files. 
             It included troubleshooting path typos and handling permissions with <code>sudo</code>.
           </p>
-          <p><strong>Challenge:</strong> Managing nested directories and fixing errors like typos (<i>Developments → Development</i>).</p>
           <p><strong>Skills Learned:</strong> Recursive directory creation, navigation, file handling, debugging, and permission management.</p>
           
-          <!-- Challenge Screenshot -->
+          <!-- Challenge -->
           <div class="project-images">
-            <h4>Challenge Screenshot</h4>
-            <img src="Challenge.png" alt="Challenge Screenshot" style="max-width:90%; border-radius:10px; margin:10px auto; display:block;">
+            <h3>Challenge</h3>
+            <img src="Challenge.png" alt="Challenge Screenshot">
+
+            <div class="solution">
+              <h4>Solution Part 1</h4>
+              <img src="solution1.png" alt="Solution 1 Screenshot">
+            </div>
+
+            <div class="solution">
+              <h4>Solution Part 2</h4>
+              <img src="solution2.png" alt="Solution 2 Screenshot">
+            </div>
           </div>
         </div>
         <div class="card">
