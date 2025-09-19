@@ -9,28 +9,30 @@
   <style>
     /* Extra style just for Linux Project Card */
     .wide-card {
-      max-width: 750px;
-      margin: 0 auto;
+      max-width: 720px;
+      margin: 20px auto;
+      padding: 20px;
     }
     .project-images {
       margin-top: 15px;
     }
     .solution, .challenge {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-align: center;
     }
     .solution img, .challenge img {
-      max-width: 90%;
+      max-width: 100%;
       height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
       display: block;
       margin: 10px auto;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     .solutions-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 15px;
+      margin-top: 10px;
     }
     @media (max-width: 768px) {
       .solutions-grid {
@@ -130,6 +132,7 @@
           <p>Deployed static website with AWS S3 + CloudFront as part of AWS Builder Challenge #2.</p>
           <a href="https://builder.aws.com/content/31wKyQnMNuJy1GkaBvu5m1fhcYX/the-deployed-heart" target="_blank">My Building Experience</a>
         </div>
+
         <!-- Linux Project Card -->
         <div class="card wide-card">
           <h3>📂 Linux Filesystem Management Project</h3>
@@ -161,6 +164,7 @@
             </div>
           </div>
         </div>
+
         <div class="card">
           <h3>📡 FTTH/HFC Deployments</h3>
           <p>Installed and optimized fiber networks during internship at Cloud Base.</p>
