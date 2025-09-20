@@ -43,9 +43,32 @@
       color: blue;
       font-weight: bold;
     }
+
+    /* Toggle button */
+    .mode-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: #0d0d0d;
+      color: #00ff99;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #00ff99;
+      text-decoration: none;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+    .mode-toggle:hover {
+      background: #00ff99;
+      color: #0d0d0d;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Toggle button to CLI -->
+  <a href="Cli.html" class="mode-toggle">💻 CLI Mode</a>
 
   <!-- HERO -->
   <header class="hero">
