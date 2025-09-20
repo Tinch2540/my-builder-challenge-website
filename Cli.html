@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CLI Mode - Titus Mutungati</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #00ff00;
+      font-family: monospace;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    #terminal {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+    .line {
+      margin: 0.2rem 0;
+    }
+    #input-line {
+      display: flex;
+      padding: 0.5rem;
+      border-top: 1px solid #333;
+    }
+    #prompt {
+      margin-right: 0.5rem;
+    }
+    #cmd {
+      background: transparent;
+      border: none;
+      color: #00ff00;
+      font-family: monospace;
+      font-size: 1rem;
+      flex: 1;
+      outline: none;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Toggle button */
+    .mode-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: #0d0d0d;
+      color: #00ff99;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #00ff99;
+      text-decoration: none;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+    .mode-toggle:hover {
+      background: #00ff99;
+      color: #0d0d0d;
+    }
+  </style>
+</head>
+<body>
+  <!-- Toggle button to GUI -->
+  <a href="index.html" class="mode-toggle">🎨 GUI Mode</a>
+
+  <div id="terminal">
+    <div class="line">Welcome to Titus Mutungati's Portfolio CLI 🚀</div>
+    <div class="line">Type <span style="color:#0ff">help</span> to see available commands.</div>
+  </div>
+
+  <div id="input-line">
+    <span id="prompt">guest@portfolio:~$</span>
+    <input type="text" id="cmd" autofocus autocomplete="off"/>
+  </div>
+
+  <script>
+    const terminal = document.getElementById("terminal");
+    const cmdInput = document.getElementById("cmd");
+
+    const commands = {
+      help: `Available commands:
+  help      → Show this help menu
+  whoami    → About me
+  skills    → My technical & soft skills
+  projects  → Projects I have worked on
+  education → My academic background
+  contact   → Contact details
+  socials   → GitHub & LinkedIn
+  resume    → Download my resume
+  clear     → Clear the screen`,
+
+      whoami: `👋 Hi, I'm Titus Mutungati.
+☁️ Cloud Builder | AWS Enthusiast | Aspiring DevOps Engineer.
+Passionate about leveraging cloud technologies and DevOps practices 
+to solve real-world problems and deliver scalable solutions.`,
+
+      skills: `🛠 Skills:
+- Cloud: AWS (S3, EC2, CloudFront)
+- Programming: Python, Bash scripting
+- Networking: FTTH, HFC, Routing
+- Tools: Git, Linux, Docker (basics)
+- Soft Skills: Troubleshooting, Problem-solving, Teamwork, Communication`,
+
+      projects: `📂 Projects:
+1. AI Healthcare System → Developed a system for predictive diagnosis using AI.
+2. AWS Builder Challenge → Hands-on AWS solutions for cloud infrastructure.
+3. Linux Filesystem Project → Custom implementation to understand OS internals.
+4. Weather Dashboard → Web app fetching live weather data.
+
+(For demos or repos, visit: https://github.com/Tinch2540)`,
+
+      education: `🎓 Education:
+- Bachelor’s Degree in Information Technology (Ongoing)
+- Certifications: AWS Cloud Practitioner, Networking Fundamentals`,
+
+      contact: `📍 Nairobi, Kenya
+📞 +254112771870
+✉️ <a href="mailto:titusmutungati20@gmail.com">titusmutungati20@gmail.com</a>`,
+
+      socials: `🔗 Social Profiles:
+- GitHub: <a href="https://github.com/Tinch2540" target="_blank">github.com/Tinch2540</a>
+- LinkedIn: <a href="https://linkedin.com/in/titusmutungati" target="_blank">linkedin.com/in/titusmutungati</a>`,
+
+      resume: `📑 Resume:
+<a href="resume.pdf" target="_blank">Download my CV (PDF)</a>`
+    };
+
+    // Alias mapping (about → whoami)
+    const aliases = {
+      about: "whoami"
+    };
+
+    function printLine(text) {
+      const line = document.createElement("div");
+      line.className = "line";
+      line.innerHTML = text;
+      terminal.appendChild(line);
+      terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    cmdInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const input = cmdInput.value.trim();
+        if (input === "") return;
+        printLine("guest@portfolio:~$ " + input);
+
+        // Handle alias
+        const cmd = aliases[input] || input;
+
+        if (cmd === "clear") {
+          terminal.innerHTML = "";
+        } else if (commands[cmd]) {
+          printLine(commands[cmd]);
+        } else {
+          printLine("Command not found: " + input + ". Type 'help' for a list of commands.");
+        }
+
+        cmdInput.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
