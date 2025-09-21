@@ -256,6 +256,60 @@
       border-top: 1px solid #eee;
       font-size: 0.9rem;
     }
+	  /* Mobile Optimizations */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 10px;
+  }
+  nav a {
+    font-size: 0.9rem;
+    padding: 6px 2px;
+  }
+  .mode-toggle {
+    order: 1; /* ensures button goes to last row */
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+  .hero-links a {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  section {
+    margin: 40px auto;
+    padding: 0 12px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr; /* stack cards */
+  }
+  .wide-card {
+    grid-column: auto;
+  }
+
+  .contact-form {
+    padding: 20px 12px;
+  }
+  .contact-submit-btn {
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 <body>
