@@ -10,9 +10,7 @@
       --accent: #00ff99;
       --dark: #0d0d0d;
       --light: #f9fafc;
-      --card-bg: #ffffff;
     }
-
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -20,62 +18,66 @@
       background: var(--light);
       color: var(--dark);
     }
-
-    a { color: var(--accent); text-decoration: none; transition: 0.3s; }
-    a:hover { color: #00cc7a; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     /* Navbar */
     nav {
       position: sticky;
       top: 0;
-      background: #fff;
+      background: white;
       border-bottom: 1px solid #eee;
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 25px;
+      gap: 20px;
       padding: 15px 20px;
       z-index: 999;
+      transition: box-shadow 0.3s ease;
+    }
+    nav.scrolled {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     nav a {
       font-weight: 600;
       color: var(--dark);
-      position: relative;
-      padding-bottom: 5px;
     }
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
+    /* CLI Mode Toggle */
+    .mode-toggle {
+      margin-left: auto;
+      font-weight: 600;
+      color: white !important;
+      background: var(--dark);
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .mode-toggle:hover {
       background: var(--accent);
-      transition: width 0.3s;
+      color: var(--dark) !important;
     }
-    nav a:hover::after { width: 100%; }
 
     /* Hero */
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
       background: linear-gradient(135deg, #e8fdf4, #f9fafc);
     }
     .profile-photo {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 4px solid var(--accent);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       object-fit: cover;
     }
-    .hero h1 { font-size: 2.8rem; margin: 20px 0 10px; }
-    .tagline { font-size: 1.2rem; margin-bottom: 15px; color: #333; }
-    .hero-links { margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .hero h1 { font-size: 2.5rem; margin: 20px 0 10px; }
+    .tagline { font-size: 1.2rem; margin-bottom: 15px; }
+    .hero-links { margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
     .hero-links a {
-      padding: 10px 18px;
+      padding: 8px 16px;
       border: 1px solid var(--accent);
-      border-radius: 20px;
-      transition: all 0.3s;
+      border-radius: 8px;
+      transition: 0.3s;
     }
     .hero-links a:hover {
       background: var(--accent);
@@ -84,47 +86,39 @@
     blockquote {
       font-style: italic;
       max-width: 600px;
-      margin: 25px auto;
+      margin: 20px auto;
       color: #555;
     }
 
     /* Sections */
     section {
-      margin: 70px auto;
+      margin: 60px auto;
       max-width: 1100px;
       padding: 0 20px;
     }
     h2 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 40px;
-      position: relative;
+      margin-bottom: 30px;
+      border-bottom: 3px solid var(--accent);
       display: inline-block;
-    }
-    h2::after {
-      content: '';
-      display: block;
-      width: 60%;
-      margin: 8px auto 0;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 2px;
+      padding-bottom: 5px;
     }
 
     /* Cards */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      gap: 20px;
     }
     .card {
-      background: var(--card-bg);
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+    .card:hover { transform: translateY(-5px); }
 
     /* Wide project card */
     .wide-card { grid-column: span 2; }
@@ -136,9 +130,9 @@
     .contact-form {
       text-align: center;
       background: #fff;
-      padding: 45px 25px;
-      border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       max-width: 600px;
       margin: auto;
     }
@@ -154,23 +148,18 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       border: 1px solid #ccc;
       border-radius: 8px;
       outline: none;
       background: #fff;
-      transition: border 0.3s;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--accent);
     }
     .form-group label {
       position: absolute;
-      top: 14px;
-      left: 14px;
+      top: 12px;
+      left: 12px;
       background: white;
-      padding: 0 5px;
+      padding: 0 4px;
       color: #777;
       transition: 0.2s;
       pointer-events: none;
@@ -180,7 +169,7 @@
     .form-group textarea:focus + label,
     .form-group textarea:not(:placeholder-shown) + label {
       top: -8px;
-      left: 12px;
+      left: 10px;
       font-size: 0.8rem;
       color: var(--accent);
     }
@@ -188,17 +177,31 @@
       background: var(--accent);
       color: var(--dark);
       font-weight: 600;
-      padding: 14px;
+      padding: 12px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
     }
-    .contact-submit-btn:hover { opacity: 0.9; }
+    .contact-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    /* Animations for button */
+    .pulse { animation: pulse 0.6s; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .shake { animation: shake 0.4s; }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
 
     /* Messages */
     .form-message {
-      margin-top: 12px;
+      margin-top: 10px;
       font-weight: 600;
       padding: 12px;
       border-radius: 8px;
@@ -226,11 +229,10 @@
     /* Footer */
     footer {
       text-align: center;
-      padding: 25px;
-      margin-top: 50px;
+      padding: 20px;
+      margin-top: 40px;
       border-top: 1px solid #eee;
       font-size: 0.9rem;
-      color: #666;
     }
   </style>
 </head>
@@ -243,6 +245,7 @@
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
+    <a href="Cli.html" class="mode-toggle">💻 CLI Mode</a>
   </nav>
 
   <!-- HERO -->
@@ -364,6 +367,17 @@
       const messageDiv = document.getElementById('form-message');
       const submitBtn = form.querySelector('.contact-submit-btn');
 
+      // Navbar shadow on scroll
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 10) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      // Contact form submit
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         submitBtn.textContent = 'Sending...';
@@ -385,16 +399,20 @@
 
           if (response.ok) {
             showMessage('✅ Message sent successfully! Thank you for reaching out.', 'success');
+            submitBtn.classList.add('pulse');
             form.reset();
           } else {
             showMessage('⚠️ Failed to send message. Please try again.', 'error');
+            submitBtn.classList.add('shake');
           }
         } catch (error) {
           showMessage('❌ Network error. Please check your connection and try again.', 'error');
+          submitBtn.classList.add('shake');
         }
 
         submitBtn.textContent = 'Send Message';
         submitBtn.disabled = false;
+        setTimeout(() => submitBtn.classList.remove('pulse','shake'), 600);
       });
 
       function showMessage(text, type) {
