@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Filesystem Management Project</title>
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --dark: #1f2937;
+      --accent: #2563eb;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    h5 {
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Image gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .gallery figure {
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .gallery figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--dark);
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Linux Filesystem Management Project</h1>
+  </header>
+
+  <main>
+    <section>
+      <p>
+        In this project, I created and managed a multi-level company directory structure in Linux to simulate real-world enterprise departments. 
+        The work focused on using essential Linux commands such as <code>mkdir -p</code>, <code>cd</code>, <code>ls -R</code>, and <code>touch</code> 
+        to build, navigate, and manage directories and files efficiently. The project demonstrates not only technical execution but also 
+        problem-solving skills, such as handling permission issues with <code>sudo</code> and correcting errors caused by typos or missing directories. 
+      </p>
+      <p>
+        I structured a virtual company with departments such as Finance, IT, and Marketing, each containing relevant subfolders and files 
+        (e.g., <em>budget.xlsx</em>, <em>app.py</em>, <em>survey.csv</em>).
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Highlights</h2>
+      <ul>
+        <li>Used <code>mkdir -p</code> to recursively create directories at multiple levels in one command.</li>
+        <li>Navigated the filesystem using <code>cd</code> and verified the hierarchy with <code>ls -R</code>.</li>
+        <li>Created departmental files with <code>touch</code>, adding realism to the structure.</li>
+        <li>Applied <code>sudo</code> to manage permission restrictions.</li>
+        <li>Debugged path issues (e.g., corrected a typo: <em>Developments</em> → <em>Development</em>).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li><code>mkdir -p</code> for recursive directory creation</li>
+        <li><code>cd</code> and <code>ls -R</code> for navigation and structure verification</li>
+        <li><code>touch</code> for file creation</li>
+        <li><code>sudo</code> for overcoming permission issues</li>
+        <li>Debugging path errors and correcting directory naming mistakes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Gallery</h2>
+      <h5>Right Click on Solution 1 and Solution 2 Images and Open in New Tab to See the Commands Clearly</h5>
+      <div class="gallery">
+        <figure>
+          <img src="Solution_1.png" alt="Solution 1 Screenshot">
+          <figcaption>Solution 1</figcaption>
+        </figure>
+        <figure>
+          <img src="Solution_2.png" alt="Solution 2 Screenshot">
+          <figcaption>Solution 2</figcaption>
+        </figure>
+        <figure>
+          <img src="Challenge.png" alt="Challenge Screenshot">
+          <figcaption>Challenge</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Linux Filesystem Management Project</p>
+  </footer>
+
+</body>
+</html>
