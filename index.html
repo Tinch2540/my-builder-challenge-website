@@ -17,6 +17,7 @@
       line-height: 1.6;
       background: var(--light);
       color: var(--dark);
+      scroll-behavior: smooth;
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -41,7 +42,23 @@
     nav a {
       font-weight: 600;
       color: var(--dark);
+      position: relative;
+      padding: 6px 4px;
     }
+    nav a.active {
+      color: var(--accent);
+    }
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
     /* CLI Mode Toggle */
     .mode-toggle {
       margin-left: auto;
@@ -176,12 +193,17 @@
     .contact-submit-btn {
       background: var(--accent);
       color: var(--dark);
-      font-weight: 600;
-      padding: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .contact-submit-btn:hover {
+      background: #00cc77;
+      transform: translateY(-2px);
     }
     .contact-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
@@ -366,6 +388,8 @@
       const form = document.querySelector('.contact-form-container');
       const messageDiv = document.getElementById('form-message');
       const submitBtn = form.querySelector('.contact-submit-btn');
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      const sections = document.querySelectorAll('main section');
 
       // Navbar shadow on scroll
       window.addEventListener('scroll', () => {
@@ -375,6 +399,21 @@
         } else {
           nav.classList.remove('scrolled');
         }
+
+        // Highlight active section
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 80;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
       });
 
       // Contact form submit
